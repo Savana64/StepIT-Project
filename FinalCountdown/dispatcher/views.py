@@ -32,5 +32,8 @@ class ReserveCreateView(View):
         driver.last_drive_date = start_time
         driver.save()
         return render(request, 'reservation_success.html', {'reservation': reservation})
+    
+def index(request):
+    latest_question_list = Reservation.objects.order_by('start_time') [:10]   
 
 # Create your views here.

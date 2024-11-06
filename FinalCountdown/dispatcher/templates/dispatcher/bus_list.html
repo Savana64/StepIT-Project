@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autobusy</title>
+</head>
+<body>
+    <h2>Seznam autobusů</h2>
+    <ul>
+        {% for bus in buses %}
+            <li>
+                <a href="{% url 'bus_detail'bus.id %}">{{ bus.name }}</a>
+                -Míst k sezení: {{ bus.seats }}
+                -Stav: {{ 'V provozu'if bus.ready else 'MIMO PROVOZ'}}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
