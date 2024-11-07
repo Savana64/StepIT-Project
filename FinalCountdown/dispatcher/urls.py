@@ -7,4 +7,5 @@ urlpatterns = [
     path('buses/', views.BusListView.as_view(), name='bus_list'),
     path("drivers/", views.DriverCeduleView.as_view(), name='driver_schedule'),
     path('reserve/<int:bus_id>/', views.ReserveCreateView.as_view(), name='create_reservation'),
+    path('error/', views.error, name='error.html'),
 ]

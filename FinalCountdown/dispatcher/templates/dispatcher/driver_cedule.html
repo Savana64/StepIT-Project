@@ -1,12 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rozvrh řidičů</title>
 </head>
 <body>
-    <p>Mr. Duna
-    </p>
+    <h2>Rozvrh řidičů</h2>
+    <ul>
+        {% for driver in drivers %}
+            <li>Řidič: {{driver.name}} - Šichty:...</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
